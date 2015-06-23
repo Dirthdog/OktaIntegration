@@ -1,0 +1,54 @@
+﻿<div class="jumbotron">
+    <h1>FPI OKTA API Test</h1>
+    <p class="lead">The intent of this application is to exercise the API provided by OKTA</p>
+    <p><a href="http://developer.okta.com/docs/sdk/core/csharp_api_sdk/html/6af60b57-62fa-477c-a899-e2f21286c53d.htm" class="btn btn-primary btn-lg">Learn more about Okta &raquo;</a></p>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <h2>Simple Authentication</h2>
+        <p>Perform a basic Authorization of a User</p>
+        <p><a class="btn btn-default" data-bind="click:onAuthenticate">Authenticate</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Authentication Status</h2>
+        <p>Blah</p>
+        <p><a class="btn btn-default" data-bind="click:onAuthenticate2">Authenticate2</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>User Provisioning</h2>
+        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
+        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301872">Learn more &raquo;</a></p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <h2>Create User</h2>
+        <p>Create a User</p>
+        <p><a class="btn btn-default" data-bind="click:onCreateUser">CreateUser</a></p>
+        <input type="text" id="txtAddUser" data-bind="value: NewUserName"/>
+    </div>
+    <div class="col-md-4">
+        <h2>Delete User</h2>
+        <p>Delete a User</p>
+        <p><a class="btn btn-default" data-bind="click:onDeleteUser">DeleteUser</a></p>
+        <input type="text" id="txtDelUser" data-bind="value: NewUserName" />
+    </div>
+    <div class="col-md-4">
+        <h2>Session with Creds</h2>
+        <p>Create Session with Credentials</p>
+        <p><a class="btn btn-default" data-bind="click:onSessionCreate">Create Session (jscript)</a></p>
+    </div>
+</div>
+<p></p>
+<label data-bind="text: MessageData"></label>
+<p>
+    <!--ko if: dataresult -->
+    firstName:  <span data-bind="text: dataresult().profile.firstName"></span>,
+    lastName: <span data-bind="text: dataresult().profile.lastName"></span>,
+    id: <span data-bind="text: dataresult().credentials.id"></span>,
+    email: <span data-bind="text: dataresult().profile.enauk"></span>,
+    status: <span data-bind="text: dataresult().status"></span>,
+    recoveryQuestion: <span data-bind="text: dataresult().credentials.recovery_question.question"></span>,
+    <!--/ko-->
+
+</p>
