@@ -29,7 +29,7 @@ namespace OKTAIntegration.Controllers
                 if (ID == "3") //Create a New User
                 {
                     var user = new User("newuser1@financialpartners.com", "newuser1@financialpartners.com", "New", "User1");
-                    user.Credentials.Password = new Password() { Value = "fredericko" };
+                    user.Credentials.Password = new Password() { Value = "1234" };
                     user = usersClient.Add(user);
                     return Ok(user);
                 }
@@ -45,7 +45,7 @@ namespace OKTAIntegration.Controllers
                     //Not Super Clear on what to do here the API guide is weak for C# developers
                     //It assumes you have strong knowledge of REST and JSON
                     var session = oktaClient.GetSessionsClient();
-                    session.Create("eric.pahl@financialpartners.com", "Okta9173!");
+                    session.Create("eric.pahl@financialpartners.com", "7381!");
                     return Ok(session); //this should be a token
 
                 }
