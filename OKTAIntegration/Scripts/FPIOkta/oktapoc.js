@@ -122,10 +122,10 @@ function OKTAPOCVM() {
             "headers": {
                 "accept": "application/json",
                 "content-type": "application/json",
-                "authorization": "SSWS 002BjXkTB8m09RajQ19XOWWgFb0ZBbDch2J2SKKpxE"
+                "authorization": "SWSS 12391092jdkj4BJ8498JQHNEifj3891823478px83E"
             },
             "processData": false,
-            "data": "{\n  \"username\": \"eric.pahl@financialpartners.com\",\n  \"password\": \"Okta9173!\"\n}"
+            "data": "{\n  \"username\": \"eric.pahl@financialpartners.com\",\n  \"password\": \"1234!\"\n}"
         }
 
         var request = $.ajax(settings);
